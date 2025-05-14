@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace Supporter - FootArena</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ton fichier CSS -->
+</head>
+<body>
+    <h1>Espace Supporter</h1>
+
+    <!-- Formulaire de pronostic -->
+    <h2>Fais ton pronostic</h2>
+    <form action="enregistrer_pronostic.php" method="POST">
+        <label for="match">Match :</label>
+        <input type="text" id="match" name="match" placeholder="Équipe A vs Équipe B" required><br>
+
+        <label for="prediction">Ton pronostic :</label>
+        <input type="text" id="prediction" name="prediction" placeholder="2-1, match nul, etc." required><br>
+
+        <button type="submit">Envoyer le pronostic</button>
+    </form>
+
+    <hr>
+
+    <!-- Formulaire de commentaire -->
+    <h2>Laisse un commentaire</h2>
+    <form action="enregistrer_commentaire.php" method="POST">
+        <label for="commentaire">Ton commentaire :</label><br>
+        <textarea id="commentaire" name="commentaire" rows="5" cols="40" placeholder="Exprime ton avis ici..." required></textarea><br>
+
+        <button type="submit">Envoyer le commentaire</button>
+    </form>
+
+    <hr>
+
+    <!-- Liens vers les fichiers enregistrés -->
+    <h2>Voir ce que les autres ont écrit</h2>
+    <ul>
+        <li><a href="voir_pronostics.php">Voir les pronostics</a></li>
+        <li><a href="voir_commentaires.php">Voir les commentaires</a></li>
+    </ul>
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="index.html">
+            <button style="padding: 10px 20px; font-size: 16px; background-color: #f6d238; border: none; border-radius: 8px; cursor: pointer;">
+                Revenir à l'accueil
+            </button>
+        </a>
+    </div>
+
+</body>
+</html>
